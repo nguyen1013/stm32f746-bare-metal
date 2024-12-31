@@ -1,0 +1,97 @@
+#include "stm32f7xx.h"
+
+#define GPIOAEN					(1U<<0) // UART1 connected to PA9
+#define UART_TX					(1U<<9) // UART1 connected to PA9
+#define GPIO_ATERNATE_MODE		(0x2) 	// 0b 10
+
+void set_ahb1_periph_clock(uint32_t periphs);
+void set_ahb2_periph_clock(uint32_t periphs);
+void set_apb1_periph_clock(uint32_t periphs);
+void set_apb2_periph_clock(uint32_t periphs);
+void set_pin_mode(GPIO_TypeDef *GPIOx, unit32_t Pin, unit32_t Mode);
+
+int main(){
+
+
+	while (1) {
+
+
+
+	}
+
+}
+
+void uart3_tx_init(void)
+{
+	// 1. Enable clk access GPIOA
+	set_ahb1_periph_clock(GPIOAEN);
+	// 2. Set PA8 to alternation mode
+	set_pin_mode(GPIOAEN, UART_TX, GPIO_ATERNATE_MODE);
+	// 3. Set alternate function to USART
+	GPIOA->AFR[1] |= 1U << 0;
+	GPIOA->AFR[1] |= 1U << 1;
+	GPIOA->AFR[1] |= 1U << 2;
+	GPIOA->AFR[1] &= ~(1U << 3);
+	// Enable clk to the USART3 module
+	// Configure USART parameters
+	// Set Baudrate
+	// Enable USART
+
+
+
+}
+
+void set_ahb1_periph_clock(uint32_t periphs)
+{
+	// RCC->AHB1ENR |= periphs;
+	SET_BIT(RCC->AHB1ENR, periphs);
+}
+
+void set_ahb2_periph_clock(uint32_t periphs)
+{
+	SET_BIT(RCC->AHB2ENR, periphs);
+}
+
+void set_apb1_periph_clock(uint32_t periphs)
+{
+	SET_BIT(RCC->APB1ENR, periphs);
+}
+
+void set_apb2_periph_clock(uint32_t periphs)
+{
+	SET_BIT(RCC->APB2ENR, periphs);
+}
+
+void set_pin_mode(GPIO_TypeDef *GPIOx, unit32_t Pin, unit32_t Mode)
+{
+	// Clear the relevant bits in the mode register
+	// GPIOx->MODER &= ~(1U<<18);
+	// GPIOx->MODER &= ~(1U<<19);
+	// Set the relevant bits in the mode register
+	// GPIOx->AFR |= 1U<<19;
+	MODIFY_REG(GPIOx->AFR, (0x3 << (POSITION_VAL(Pin) * 2U)), (0x1 << ((POSITION_VAL(Pin) * 2U))));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

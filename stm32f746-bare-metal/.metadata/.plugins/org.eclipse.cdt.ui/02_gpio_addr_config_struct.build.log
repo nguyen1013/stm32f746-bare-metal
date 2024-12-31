@@ -1,0 +1,20 @@
+11:21:44 **** Build of configuration Debug for project 02_gpio_addr_config_struct ****
+make -j20 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f746nghx.d" -MT"Startup/startup_stm32f746nghx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f746nghx.o" "../Startup/startup_stm32f746nghx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "02_gpio_addr_config_struct.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\01 Jupiter\OneDrive\05-embedded-learning\STM32Cube\01-udemy\MySTM32F7Bare-MetalWorkspace\02_gpio_addr_config_struct\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="02_gpio_addr_config_struct.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 02_gpio_addr_config_struct.elf
+ 
+arm-none-eabi-size  02_gpio_addr_config_struct.elf 
+arm-none-eabi-objdump -h -S 02_gpio_addr_config_struct.elf  > "02_gpio_addr_config_struct.list"
+   text	   data	    bss	    dec	    hex	filename
+    760	      0	   1568	   2328	    918	02_gpio_addr_config_struct.elf
+Finished building: default.size.stdout
+ 
+Finished building: 02_gpio_addr_config_struct.list
+ 
+
+11:21:46 Build Finished. 0 errors, 0 warnings. (took 2s.8ms)
+

@@ -1,0 +1,22 @@
+#include "stm32f7xx.h"
+
+
+void set_ahb1_periph_clock(uint32_t periphs);
+
+
+int main(){
+
+
+	while (1) {
+
+
+
+	}
+
+}
+
+void set_ahb1_periph_clock(uint32_t periphs)
+{
+	// RCC->AHB1ENR |= periphs;
+	SET_BIT(RCC->AHB1ENR, periphs);
+}

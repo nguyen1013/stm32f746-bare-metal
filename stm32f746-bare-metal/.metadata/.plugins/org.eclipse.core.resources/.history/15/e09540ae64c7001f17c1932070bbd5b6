@@ -1,0 +1,73 @@
+#include <stdio.h>
+#include "stm32f7xx.h"
+#include "uart.h"
+#include "rcc.h"
+#include "gpio.h"
+
+//#define GPIOAEN					(1U<<0) // UART1 connected to PA9
+#define UART1_TX				(1U<<9) // UART1 connected to PA9
+#define GPIO_ALTERNATE_MODE		(0x2) 	// 0b 10
+//#define UART1EN					(1U<<4) // UART1 connected APB2
+#define UART_DATAWIDTH_8B		(0x00000000U) // Start bit, 8 data bits, n stop bits
+#define UART_PARITY_NONE        (0x00000000U) // Parity control disabled
+#define UART_STOPBITS_1			(0x00000000U) // 1 stop bit
+
+void set_ahb1_periph_clock(uint32_t periphs);
+void set_ahb2_periph_clock(uint32_t periphs);
+void set_apb1_periph_clock(uint32_t periphs);
+void set_apb2_periph_clock(uint32_t periphs);
+void set_pin_mode(GPIO_TypeDef *GPIOx, uint32_t Pin, uint32_t Mode);
+void config_uart_parameters(USART_TypeDef *USARTx, uint32_t DataWidth, uint32_t Parity, uint32_t StopBits);
+uint16_t compute_uart_div(uint32_t PeriphClk, uint32_t Baudrate);
+void uart_set_baudrate(USART_TypeDef * USARTx, uint32_t PeriphClk, uint32_t BaudRate);
+void uart_write(USART_TypeDef * USARTx, uint8_t value);
+void uart1_tx_init(void);
+void set_uart_transfer_direction(USART_TypeDef * USARTx, uint32_t TransferDirection);
+void uart_enable(USART_TypeDef * USARTx);
+
+int main(){
+
+	int x;
+	uart1_tx_init();
+
+	while(1)
+	{
+		printf("Hello from STM32F746\n\r");
+		for(int i=0;i<9000;i++)
+		{
+			x++;
+		}
+	}
+}
+
+void set_ahb1_periph_clock(uint32_t perihs)
+{
+	SET_BIT(RCC->AHB1ENR,perihs);
+}
+
+
+void set_ahb2_periph_clock(uint32_t perihs)
+{
+	SET_BIT(RCC->AHB2ENR,perihs);
+}
+
+void set_apb1_periph_clock(uint32_t perihs)
+{
+	SET_BIT(RCC->APB1ENR,perihs);
+}
+
+void set_apb2_periph_clock(uint32_t perihs)
+{
+	SET_BIT(RCC->APB2ENR,perihs);
+}
+
+void set_pin_mode(GPIO_TypeDef *GPIOx, uint32_t Pin, uint32_t Mode)
+{
+	// Clear the relevant bits in the mode register
+	 //GPIOx->MODER &= ~(1U<<18);
+	 //GPIOx->MODER &= ~(1U<<19);
+	// Set the relevant bits in the mode register
+	 //GPIOx->MODER |= 1U<<19;
+	//MODIFY_REG(GPIOx->MODER, (0x3 << (POSITION_VAL(Pin) * 2U)), (Mode << (POSITION_VAL(Pin) * 2U)));
+	MODIFY_REG(GPIOx->MODER, (0x3 << (POSITION_VAL(Pin) * 2U)), (Mode << ((POSITION_VAL(Pin) * 2U))));
+}

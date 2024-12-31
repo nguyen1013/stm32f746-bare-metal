@@ -1,0 +1,17 @@
+09:30:46 **** Build of configuration Debug for project 05a-gpio-input ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"D:/01 Jupiter/OneDrive/05-embedded-learning/STM32Cube/01-udemy/chip-header-files/CMSIS/Include" -I"D:/01 Jupiter/OneDrive/05-embedded-learning/STM32Cube/01-udemy/chip-header-files/CMSIS/Device/ST/STM32F7xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "05a-gpio-input.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\01 Jupiter\OneDrive\05-embedded-learning\STM32Cube\01-udemy\MySTM32F7Bare-MetalWorkspace\05a-gpio-input\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="05a-gpio-input.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 05a-gpio-input.elf
+ 
+arm-none-eabi-size  05a-gpio-input.elf 
+arm-none-eabi-objdump -h -S 05a-gpio-input.elf  > "05a-gpio-input.list"
+   text	   data	    bss	    dec	    hex	filename
+    800	      0	   1568	   2368	    940	05a-gpio-input.elf
+Finished building: default.size.stdout
+ 
+Finished building: 05a-gpio-input.list
+ 
+
+09:30:48 Build Finished. 0 errors, 0 warnings. (took 1s.629ms)
+

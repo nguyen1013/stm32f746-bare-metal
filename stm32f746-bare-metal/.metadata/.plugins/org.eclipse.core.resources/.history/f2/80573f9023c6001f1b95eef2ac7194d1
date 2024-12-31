@@ -1,0 +1,47 @@
+#include "stm32f7xx.h"
+
+/*#define GPIOI_CLK_EN			(1U<<8)
+#define USER_LED1_MODER			USER_LED1_MODER
+#define USER_LED1 				(1U<<1)
+#define PIN_11					(1U<<11)
+#define BTN_PIN					PIN_11
+*/
+
+#define GPIOI_CLK_EN			(1U<<8)
+#define USER_LED_MODER			(1U<<1) // PI1
+#define BTN_PI11				(1U<<11)
+
+int main(){
+
+/*	RCC->AHB1ENR |= GPIOI_CLK_EN; // PI1(led) and PI11(button)
+	GPIOI->MODER |= USER_LED_MODER;
+
+	GPIOI->MODER &= ~(1U<<22);
+	GPIOI->MODER &= ~(1U<<23);
+
+
+	while (1) {
+		if (GPIOI->IDR & (1U<<11)) {
+			GPIOI->BSRR = 1U<<1;
+		} else {
+			GPIOI->BSRR = 1U<<17;
+		}
+	}*/
+
+	RCC->AHB1ENR |= GPIOI_CLK_EN;
+	GPIOI->MODER |= USER_LED_MODER;
+
+	GPIOI->MODER &= ~(1U<<22);
+	GPIOI->MODER &= ~(1U<<23);
+
+	while(1){
+		if (GPIOI->IDR & BTN_PI11 ) {
+			GPIOI->BSRR = 1U<<1;
+		} else {
+			GPIOI->BSRR = 1U<<17;
+		}
+	}
+
+
+
+}

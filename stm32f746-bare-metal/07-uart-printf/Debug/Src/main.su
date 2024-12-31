@@ -1,0 +1,14 @@
+../Src/main.c:25:5:__io_putchar	16	static
+../Src/main.c:32:5:main	16	static
+../Src/main.c:47:6:uart_write	16	static
+../Src/main.c:55:6:uart1_tx_init	8	static
+../Src/main.c:83:6:uart_enable	16	static
+../Src/main.c:89:6:set_uart_transfer_direction	16	static
+../Src/main.c:94:6:uart_set_baudrate	24	static
+../Src/main.c:99:6:config_uart_parameters	24	static
+../Src/main.c:106:6:set_ahb1_periph_clock	16	static
+../Src/main.c:112:6:set_ahb2_periph_clock	16	static
+../Src/main.c:117:6:set_apb1_periph_clock	16	static
+../Src/main.c:122:6:set_apb2_periph_clock	16	static
+../Src/main.c:127:6:set_pin_mode	40	static,ignoring_inline_asm
+../Src/main.c:138:10:compute_uart_div	16	static

@@ -1,0 +1,27 @@
+#include "stm32f7xx.h"
+
+#define GPIOI_CLK_EN			(1U<<8)
+#define USER_LED_MODER			(1U<<2) // PI1
+#define BTN_PI11				(1U<<11)
+
+int main(){
+
+	RCC->AHB1ENR |= (1U<<8); // PI1(led) and PI11(button)
+	GPIOI->MODER |= USER_LED_MODER;
+
+	GPIOI->MODER &= ~(1U<<22);
+	GPIOI->MODER &= ~(1U<<23);
+
+
+	while (1) {
+
+		if (GPIOI->IDR & BTN_PI11) {
+			GPIOI->BSRR = (1U<<1);
+		} else {
+			GPIOI->BSRR = (1U<<17);
+		}
+
+
+	}
+
+}

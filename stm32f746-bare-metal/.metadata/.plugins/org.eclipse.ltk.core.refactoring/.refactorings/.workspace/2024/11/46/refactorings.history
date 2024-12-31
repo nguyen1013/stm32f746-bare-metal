@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;led-3&apos;" deleteContents="false" description="Delete resource &apos;led-3&apos;" element1="/led-3" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1731571582416"/>&#x0A;<refactoring comment="Rename resource &apos;04-gpio-output-bssr&apos; to &apos;05-gpio-input&apos;" description="Rename resource &apos;04-gpio-output-bssr&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/04-gpio-output-bssr" name="05-gpio-input" stamp="1731653496053" updateReferences="true"/>
+</session>

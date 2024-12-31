@@ -1,0 +1,10 @@
+09:30:45 **** Build of configuration Debug for project 03a-gpio-output ****
+make -j20 all 
+arm-none-eabi-size  03a-gpio-output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    760	      0	   1568	   2328	    918	03a-gpio-output.elf
+Finished building: default.size.stdout
+ 
+
+09:30:45 Build Finished. 0 errors, 0 warnings. (took 399ms)
+

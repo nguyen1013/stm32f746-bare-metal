@@ -1,0 +1,17 @@
+/*
+ * uart.h
+ *
+ *  Created on: Dec 31, 2024
+ *      Author: songn
+ */
+
+#ifndef UART_H_
+#define UART_H_
+
+#include "stm32f7xx.h"
+
+#define UART1_TX				(1U<<9) // UART1 connected to PA9
+
+
+
+#endif /* UART_H_ */

@@ -1,0 +1,10 @@
+09:30:44 **** Build of configuration Debug for project 01a_gpio_addr_config ****
+make -j20 all 
+arm-none-eabi-size  01a_gpio_addr_config.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      0	   1568	   2332	    91c	01a_gpio_addr_config.elf
+Finished building: default.size.stdout
+ 
+
+09:30:44 Build Finished. 0 errors, 0 warnings. (took 404ms)
+

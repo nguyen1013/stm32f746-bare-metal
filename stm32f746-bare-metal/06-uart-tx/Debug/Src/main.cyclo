@@ -1,0 +1,13 @@
+../Src/main.c:24:5:main	2
+../Src/main.c:39:6:uart_write	2
+../Src/main.c:47:6:uart1_tx_init	1
+../Src/main.c:75:6:uart_enable	1
+../Src/main.c:81:6:set_uart_transfer_direction	1
+../Src/main.c:86:6:uart_set_baudrate	1
+../Src/main.c:91:6:config_uart_parameters	1
+../Src/main.c:98:6:set_ahb1_periph_clock	1
+../Src/main.c:104:6:set_ahb2_periph_clock	1
+../Src/main.c:109:6:set_apb1_periph_clock	1
+../Src/main.c:114:6:set_apb2_periph_clock	1
+../Src/main.c:119:6:set_pin_mode	1
+../Src/main.c:130:10:compute_uart_div	1

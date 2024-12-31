@@ -1,0 +1,16 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:02a_gpio_addr_config_struct,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:01a_gpio_addr_config Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:01_gpio_addr_config,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:06-uart-tx Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:03-gpio-output,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:03-gpio-output Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:05-gpio-input,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:03-gpio-output Debug (1),org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:06-uart-tx,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:03a-gpio-output,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:04-gpio-output-bsrr (1),org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:04-gpio-output-bsrr,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:05a-gpio-input Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:05a-gpio-input,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:06a-uart-tx,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:07-uart-printf Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:07-uart-printf,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:09-uart-rx
+eclipse.preferences.version=1
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:01_gpio_addr_config/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:01_gpio_addr_config/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:01a_gpio_addr_config\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:01a_gpio_addr_config\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:02_gpio_addr_config_struct/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:04-gpio-output-bssr/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:06a-uart-tx/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:07-uart-printf/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:09-uart-rx/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:led-3\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:led-3\ Debug/activeLaunchTarget=null\:---

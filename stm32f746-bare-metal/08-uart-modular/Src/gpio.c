@@ -1,0 +1,18 @@
+/*
+ * gpio.c
+ *
+ *  Created on: Dec 31, 2024
+ *      Author: songn
+ */
+#include "gpio.h"
+
+void set_pin_mode(GPIO_TypeDef *GPIOx, uint32_t Pin, uint32_t Mode)
+{
+	// Clear the relevant bits in the mode register
+	 //GPIOx->MODER &= ~(1U<<18);
+	 //GPIOx->MODER &= ~(1U<<19);
+	// Set the relevant bits in the mode register
+	 //GPIOx->MODER |= 1U<<19;
+	//MODIFY_REG(GPIOx->MODER, (0x3 << (POSITION_VAL(Pin) * 2U)), (Mode << (POSITION_VAL(Pin) * 2U)));
+	MODIFY_REG(GPIOx->MODER, (0x3 << (POSITION_VAL(Pin) * 2U)), (Mode << ((POSITION_VAL(Pin) * 2U))));
+}

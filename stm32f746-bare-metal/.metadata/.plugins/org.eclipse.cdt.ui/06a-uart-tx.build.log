@@ -1,0 +1,17 @@
+10:19:04 **** Incremental Build of configuration Debug for project 06a-uart-tx ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"D:/01 Jupiter/OneDrive/05-embedded-learning/STM32Cube/01-udemy/chip-header-files/CMSIS/Include" -I"D:/01 Jupiter/OneDrive/05-embedded-learning/STM32Cube/01-udemy/chip-header-files/CMSIS/Device/ST/STM32F7xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "06a-uart-tx.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\01 Jupiter\OneDrive\05-embedded-learning\STM32Cube\01-udemy\MySTM32F7Bare-MetalWorkspace\06a-uart-tx\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="06a-uart-tx.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 06a-uart-tx.elf
+ 
+arm-none-eabi-size  06a-uart-tx.elf 
+arm-none-eabi-objdump -h -S 06a-uart-tx.elf  > "06a-uart-tx.list"
+   text	   data	    bss	    dec	    hex	filename
+   1316	      0	   1568	   2884	    b44	06a-uart-tx.elf
+Finished building: default.size.stdout
+ 
+Finished building: 06a-uart-tx.list
+ 
+
+10:19:06 Build Finished. 0 errors, 0 warnings. (took 1s.857ms)
+
