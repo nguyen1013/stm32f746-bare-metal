@@ -1,0 +1,2 @@
+../Src/adc.c:9:6:pf10_adc3_init	1
+../Src/adc.c:38:10:adc_get_data	2
