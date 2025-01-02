@@ -1,0 +1,12 @@
+D:/01 Jupiter/OneDrive/05-embedded-learning/STM32Cube/01-udemy/chip-header-files/CMSIS/Include/core_cm7.h:1896:22:__NVIC_EnableIRQ	16	static
+../Src/uart.c:18:5:__io_putchar	16	static
+../Src/uart.c:25:6:uart1_tx_interrupt_init	8	static
+../Src/uart.c:59:6:uart1_tx_init	8	static
+../Src/uart.c:87:6:uart1_rxtx_init	8	static
+../Src/uart.c:134:13:uart_write	16	static
+../Src/uart.c:142:9:uart_read	16	static
+../Src/uart.c:152:13:uart_enable	16	static
+../Src/uart.c:158:13:set_uart_transfer_direction	16	static
+../Src/uart.c:163:13:uart_set_baudrate	24	static
+../Src/uart.c:168:17:compute_uart_div	16	static
+../Src/uart.c:173:13:config_uart_parameters	24	static

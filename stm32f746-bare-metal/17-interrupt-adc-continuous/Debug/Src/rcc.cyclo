@@ -1,0 +1,4 @@
+../Src/rcc.c:3:6:set_ahb1_periph_clock	1
+../Src/rcc.c:9:6:set_ahb2_periph_clock	1
+../Src/rcc.c:14:6:set_apb1_periph_clock	1
+../Src/rcc.c:19:6:set_apb2_periph_clock	1

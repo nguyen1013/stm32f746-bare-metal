@@ -1,0 +1,4 @@
+D:/01 Jupiter/OneDrive/05-embedded-learning/STM32Cube/01-udemy/chip-header-files/CMSIS/Include/core_cm7.h:1896:22:__NVIC_EnableIRQ	16	static
+../Src/adc.c:9:6:pf10_adc3_interrupt_init	8	static
+../Src/adc.c:44:6:pf10_adc3_init	4	static
+../Src/adc.c:73:10:adc_get_data	4	static
