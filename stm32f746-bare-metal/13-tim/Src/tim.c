@@ -18,6 +18,6 @@ void tim1_1hz_init(void)
 	TIM1->ARR = 10000 - 1; // 10000/10000 = 1hz
 
 	//Enable timer
-	TIM1->CR2 |= TIM_CR1_CEN;
+	TIM1->CR1 |= TIM_CR1_CEN;
 }
 

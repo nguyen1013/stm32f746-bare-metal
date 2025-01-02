@@ -3,9 +3,10 @@
 #include "uart.h"
 #include "led.h"
 
+char ch;
+
 int main(){
 
-	char ch;
 	user_led_init();
 	uart1_rxtx_init();
 

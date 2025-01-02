@@ -21,6 +21,7 @@ int main(){
 		//Clear UIF
 		TIM1->SR &= ~TIM_SR_UIF;
 
+		x++;
 		printf("A second passed and current second is: %d \n\r", x);
 	}
 }

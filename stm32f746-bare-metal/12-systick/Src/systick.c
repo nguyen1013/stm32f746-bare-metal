@@ -13,7 +13,7 @@
 void systickDelayMs(int delay)
 {
 	//Reload the number of clocks per millisecond
-	SysTick->LOAD = SYSTICK_LOAD_VALUE;
+	SysTick->LOAD = SYSTICK_LOAD_VALUE - 1;
 
 	//Clear SYST_CVR(current value register)
 	SysTick->VAL = 0;

@@ -1,1 +1,1 @@
-../Src/gpio.c:9:6:set_pin_mode	40	static,ignoring_inline_asm
+../Src/gpio.c:3:6:set_pin_mode	40	static,ignoring_inline_asm
