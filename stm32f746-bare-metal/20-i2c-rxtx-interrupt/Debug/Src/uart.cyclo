@@ -1,0 +1,12 @@
+D:/01 Jupiter/OneDrive/05-embedded-learning/STM32Cube/01-udemy/chip-header-files/CMSIS/Include/core_cm7.h:1896:22:__NVIC_EnableIRQ	2
+../Src/uart.c:19:5:__io_putchar	1
+../Src/uart.c:26:6:uart1_tx_init	1
+../Src/uart.c:54:6:uart1_rx_interrupt_init	1
+../Src/uart.c:107:6:uart1_rxtx_init	1
+../Src/uart.c:154:13:uart_write	2
+../Src/uart.c:162:9:uart_read	2
+../Src/uart.c:172:13:uart_enable	1
+../Src/uart.c:178:13:set_uart_transfer_direction	1
+../Src/uart.c:183:13:uart_set_baudrate	1
+../Src/uart.c:188:17:compute_uart_div	1
+../Src/uart.c:193:13:config_uart_parameters	1
