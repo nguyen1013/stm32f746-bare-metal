@@ -1,0 +1,9 @@
+D:/01 Jupiter/OneDrive/05-embedded-learning/STM32Cube/01-udemy/chip-header-files/CMSIS/Include/core_cm7.h:1896:22:__NVIC_EnableIRQ	2
+../Src/spi.c:9:6:spi1_config	1
+../Src/spi.c:91:6:spi5_config	1
+../Src/spi.c:173:6:spi3_config	1
+../Src/spi.c:252:6:spi2_config	1
+../Src/spi.c:334:6:spi1_activate	1
+../Src/spi.c:340:6:spi2_activate	1
+../Src/spi.c:346:6:spi3_activate	1
+../Src/spi.c:352:6:spi5_activate	1
